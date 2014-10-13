@@ -1,0 +1,4488 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<sbml xmlns="http://www.sbml.org/sbml/level2/version4" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" level="2" metaid="_7a5985b9_7ed2_40e3_8d44_3b7a24ecd10c" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:dc="http://purl.org/dc/elements/1.1/" version="4">
+  <model id="MODEL1303260007" name="Smallbone2013 - Glycolysis in S.cerevisiae - Iteration 07" metaid="metaid_glycolysis">
+    <notes>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+        <div class="dc:title">Smallbone2013 - Glycolysis in S.cerevisiae - Iteration 07</div>
+            <div class="dc:bibliographicCitation">      <p>This model is described in the article:</p>
+                <div class="bibo:title">        <a href="http://identifiers.org/pubmed/[PMID]" title="Access to this publication">A model of yeast glycolysis based on a consistent kinetic characterization of all its enzymes</a>
+                    </div>
+                <div class="bibo:authorList">Kieran Smallbone, Hanan L. Messiha, Kathleen M. Carroll, Catherine L. Winder, Naglis Malys, Warwick B. Dunn, Ettore Murabito, Neil Swainston, Joseph O. Dada, Farid Khan, Pınar Pir, Evangelos Simeonidis, Irena Spasić, Jill Wishart, Dieter Weichart, Neil W. Hayes, Daniel Jameson, David S. Broomhead, Stephen G. Oliver, Simon J. Gaskell, John E.G. McCarthy, Norman W. Paton, Hans V. Westerhoff, Douglas B. Kell, Pedro Mendes</div>
+                <div class="bibo:Journal">FEBS Letters        <em>(in press)</em>
+                    </div>
+                <p>Abstract:</p>
+                <div class="bibo:abstract">        <p>We present an experimental and computational pipeline for the generation of kinetic models of metabolism, and demonstrate its application to glycolysis in Saccharomyces cerevisiae. Starting from an approximate mathematical model, we employ a “cycle of knowledge” strategy, identifying the steps with most control over flux. Kinetic parameters of the individual isoenzymes within these steps are measured experimentally under a standardised set of conditions. Experimental strategies are applied to establish a set of in vivo concentrations for isoenzymes and metabolites. The data are integrated into a mathematical model that is used to predict a new set of metabolite concentrations and reevaluate the control properties of the system. This bottom-up modelling study reveals that control over the metabolic network most directly involved in yeast glycolysis is more widely distributed than previously thought.</p>
+                    </div>
+                </div>
+            <div class="dc:publisher">      <p>This model is hosted on        <a href="http://www.ebi.ac.uk/biomodels/">BioModels Database</a>
+            and identified
+by:        <a href="http://identifiers.org/biomodels.db/MODEL1303260007">MODEL1303260007</a>
+            .        </p>
+                <p>To cite BioModels Database, please use:        <a href="http://identifiers.org/pubmed/20587024" title="Latest BioModels Database publication">BioModels Database: An enhanced, curated and annotated resource
+for published quantitative kinetic models</a>
+            .        </p>
+                </div>
+            <div class="dc:license">      <p>To the extent possible under law, all copyright and related or
+neighbouring rights to this encoded model have been dedicated to the public
+domain worldwide. Please refer to        <a href="http://creativecommons.org/publicdomain/zero/1.0/" title="Access to: CC0 1.0 Universal (CC0 1.0), Public Domain Dedication">CC0 Public Domain
+Dedication</a>
+            for more information.        </p>
+                </div>
+            </body>
+      
+    </notes>
+    <annotation>
+      <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+        <rdf:Description rdf:about="#metaid_glycolysis">
+          <dc:creator>
+            <rdf:Bag>
+              <rdf:li rdf:parseType="Resource">
+                <vCard:N rdf:parseType="Resource">
+                  <vCard:Family>Smallbone</vCard:Family>
+                  <vCard:Given>Kieran</vCard:Given>
+                </vCard:N>
+                <vCard:EMAIL>kieran.smallbone@manchester.ac.uk</vCard:EMAIL>
+                <vCard:ORG rdf:parseType="Resource">
+                  <vCard:Orgname>University of Manchester</vCard:Orgname>
+                </vCard:ORG>
+              </rdf:li>
+            </rdf:Bag>
+          </dc:creator>
+          <dcterms:created rdf:parseType="Resource">
+            <dcterms:W3CDTF>2008-11-09T00:00:00Z</dcterms:W3CDTF>
+          </dcterms:created>
+          <dcterms:modified rdf:parseType="Resource">
+            <dcterms:W3CDTF>2012-11-14T14:34:55Z</dcterms:W3CDTF>
+          </dcterms:modified>
+          <bqbiol:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/taxonomy/4932"/>
+            </rdf:Bag>
+          </bqbiol:is>
+          <bqmodel:is>
+            <rdf:Bag>
+              <rdf:li rdf:resource="http://identifiers.org/biomodels.db/MODEL1303260007"/>
+            </rdf:Bag>
+          </bqmodel:is>
+        </rdf:Description>
+      </rdf:RDF>
+    </annotation>
+      <listOfFunctionDefinitions>
+      <functionDefinition id="fd" name="facilitated diffusion: symmetrical carrier" metaid="_39e040c2_fad0_41d8_b1fa_48d5cbf14608">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> P </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> K </ci>
+            </bvar>
+            <bvar>
+              <ci> Ki </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V </ci>
+                  <apply>
+                    <minus/>
+                    <ci> S </ci>
+                    <ci> P </ci>
+                  </apply>
+                </apply>
+                <ci> K </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S </ci>
+                  <ci> K </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P </ci>
+                  <ci> K </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> Ki </ci>
+                        <ci> S </ci>
+                      </apply>
+                      <ci> K </ci>
+                    </apply>
+                    <ci> P </ci>
+                  </apply>
+                  <ci> K </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rmm2" name="reversible michaelis-menten: two noncompeting couples" metaid="_991d4278_a938_433c_8b6e_f4a399ccd3a8">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> S1 </ci>
+                      <ci> S2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KS2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KS2 </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rmm1" name="reversible michaelis-menten: one substrate, one product" metaid="eaf3805e_4ce3_4d66_a730_e441d6e3c23a">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> P </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS </ci>
+            </bvar>
+            <bvar>
+              <ci> KP </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <ci> S </ci>
+                    <ci> KS </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P </ci>
+                    <apply>
+                      <times/>
+                      <ci> KS </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S </ci>
+                  <ci> KS </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P </ci>
+                  <ci> KP </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rmm_ub" name="reversible michaelis-menten: ordered uni-bi" metaid="cbe5aa27_a2eb_405f_b367_5f5f0e7b288e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS </ci>
+            </bvar>
+            <bvar>
+              <ci> KP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KiP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <ci> S </ci>
+                    <ci> KS </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S </ci>
+                  <ci> KS </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P1 </ci>
+                  <ci> KP1 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P2 </ci>
+                  <ci> KP2 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S </ci>
+                    <ci> P2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KS </ci>
+                    <ci> KiP2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> P1 </ci>
+                    <ci> P2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KP1 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rma" name="reversible mass action" metaid="_1e9c0c99_390f_4ba3_ae46_1f422247171c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> P </ci>
+            </bvar>
+            <bvar>
+              <ci> k </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <apply>
+                <minus/>
+                <ci> S </ci>
+                <apply>
+                  <divide/>
+                  <ci> P </ci>
+                  <ci> Keq </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="hill" name="Hill kinetics" metaid="_2756728a_d63b_4cf6_b89a_bc450a1a077d">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> KS </ci>
+            </bvar>
+            <bvar>
+              <ci> nH </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> Vmax </ci>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S </ci>
+                    <ci> KS </ci>
+                  </apply>
+                  <ci> nH </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <power/>
+                  <apply>
+                    <divide/>
+                    <ci> S </ci>
+                    <ci> KS </ci>
+                  </apply>
+                  <ci> nH </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rmm_bb" name="reversible michaelis-menten: ordered bi-bi" metaid="_4aa13be4_7378_4adc_81a7_1d03b4d7430f">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KiS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KiS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KiP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KiP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> S1 </ci>
+                      <ci> S2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KiS2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KiS2 </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S2 </ci>
+                  <ci> KiS2 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS2 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> P1 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiP2 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> P2 </ci>
+                  <ci> KiP2 </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> S2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS2 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S2 </ci>
+                    <ci> P1 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS2 </ci>
+                    <ci> KiP2 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> P2 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS2 </ci>
+                    <ci> KiP2 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> P1 </ci>
+                    <ci> P2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KP1 </ci>
+                    <ci> KiP2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> S2 </ci>
+                    <ci> P1 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS2 </ci>
+                    <ci> KiP1 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> P1 </ci>
+                    <ci> P2 </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> KiS1 </ci>
+                    <ci> KiP2 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="ima" name="irreversible mass action" metaid="f4ff1bb2_b5c6_478f_847a_186feb45f88f">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> k </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> k </ci>
+              <ci> S </ci>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="pfk_keq" name="phosphofructokinase kinetics with Keq" metaid="_1f28f586_4b3f_4d24_9cc1_d4970ce4757e">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> F6P </ci>
+            </bvar>
+            <bvar>
+              <ci> ATP </ci>
+            </bvar>
+            <bvar>
+              <ci> F16bP </ci>
+            </bvar>
+            <bvar>
+              <ci> ADP </ci>
+            </bvar>
+            <bvar>
+              <ci> AMP </ci>
+            </bvar>
+            <bvar>
+              <ci> F26bP </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> gR </ci>
+            </bvar>
+            <bvar>
+              <ci> Kf6p </ci>
+            </bvar>
+            <bvar>
+              <ci> Katp </ci>
+            </bvar>
+            <bvar>
+              <ci> L0 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ciatp </ci>
+            </bvar>
+            <bvar>
+              <ci> Kiatp </ci>
+            </bvar>
+            <bvar>
+              <ci> Camp </ci>
+            </bvar>
+            <bvar>
+              <ci> Kamp </ci>
+            </bvar>
+            <bvar>
+              <ci> Cf26 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kf26 </ci>
+            </bvar>
+            <bvar>
+              <ci> Cf16 </ci>
+            </bvar>
+            <bvar>
+              <ci> Kf16 </ci>
+            </bvar>
+            <bvar>
+              <ci> Catp </ci>
+            </bvar>
+            <bvar>
+              <ci> Kadp </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <times/>
+              <ci> Vmax </ci>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> gR </ci>
+                  <apply>
+                    <divide/>
+                    <ci> F6P </ci>
+                    <ci> Kf6p </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> ATP </ci>
+                    <ci> Katp </ci>
+                  </apply>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <ci> F16bP </ci>
+                          <ci> ADP </ci>
+                        </apply>
+                        <apply>
+                          <times/>
+                          <ci> F6P </ci>
+                          <ci> ATP </ci>
+                        </apply>
+                      </apply>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <plus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <ci> F6P </ci>
+                      <ci> Kf6p </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ATP </ci>
+                      <ci> Katp </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> gR </ci>
+                            <ci> F6P </ci>
+                          </apply>
+                          <ci> Kf6p </ci>
+                        </apply>
+                        <ci> ATP </ci>
+                      </apply>
+                      <ci> Katp </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> F16bP </ci>
+                      <ci> Kf16 </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <ci> ADP </ci>
+                      <ci> Kadp </ci>
+                    </apply>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> gR </ci>
+                            <ci> F16bP </ci>
+                          </apply>
+                          <ci> Kf16 </ci>
+                        </apply>
+                        <ci> ADP </ci>
+                      </apply>
+                      <ci> Kadp </ci>
+                    </apply>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <apply>
+                    <power/>
+                    <apply>
+                      <plus/>
+                      <cn type="integer"> 1 </cn>
+                      <apply>
+                        <divide/>
+                        <ci> F6P </ci>
+                        <ci> Kf6p </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> ATP </ci>
+                        <ci> Katp </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> gR </ci>
+                              <ci> F6P </ci>
+                            </apply>
+                            <ci> Kf6p </ci>
+                          </apply>
+                          <ci> ATP </ci>
+                        </apply>
+                        <ci> Katp </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> F16bP </ci>
+                        <ci> Kf16 </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <ci> ADP </ci>
+                        <ci> Kadp </ci>
+                      </apply>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <times/>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> gR </ci>
+                              <ci> F16bP </ci>
+                            </apply>
+                            <ci> Kf16 </ci>
+                          </apply>
+                          <ci> ADP </ci>
+                        </apply>
+                        <ci> Kadp </ci>
+                      </apply>
+                    </apply>
+                    <cn type="integer"> 2 </cn>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> L0 </ci>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> Ciatp </ci>
+                              <ci> ATP </ci>
+                            </apply>
+                            <ci> Kiatp </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> ATP </ci>
+                            <ci> Kiatp </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <cn type="integer"> 2 </cn>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> Camp </ci>
+                              <ci> AMP </ci>
+                            </apply>
+                            <ci> Kamp </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> AMP </ci>
+                            <ci> Kamp </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <cn type="integer"> 2 </cn>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <divide/>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> Cf26 </ci>
+                              <ci> F26bP </ci>
+                            </apply>
+                            <ci> Kf26 </ci>
+                          </apply>
+                          <apply>
+                            <divide/>
+                            <apply>
+                              <times/>
+                              <ci> Cf16 </ci>
+                              <ci> F16bP </ci>
+                            </apply>
+                            <ci> Kf16 </ci>
+                          </apply>
+                        </apply>
+                        <apply>
+                          <plus/>
+                          <cn type="integer"> 1 </cn>
+                          <apply>
+                            <divide/>
+                            <ci> F26bP </ci>
+                            <ci> Kf26 </ci>
+                          </apply>
+                          <apply>
+                            <divide/>
+                            <ci> F16bP </ci>
+                            <ci> Kf16 </ci>
+                          </apply>
+                        </apply>
+                      </apply>
+                      <cn type="integer"> 2 </cn>
+                    </apply>
+                    <apply>
+                      <power/>
+                      <apply>
+                        <plus/>
+                        <cn type="integer"> 1 </cn>
+                        <apply>
+                          <divide/>
+                          <apply>
+                            <times/>
+                            <ci> Catp </ci>
+                            <ci> ATP </ci>
+                          </apply>
+                          <ci> Katp </ci>
+                        </apply>
+                      </apply>
+                      <cn type="integer"> 2 </cn>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="max" name="max" metaid="_42628b89_b372_4718_ba23_4670906b036d">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> a </ci>
+            </bvar>
+            <bvar>
+              <ci> b </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <plus/>
+                <ci> a </ci>
+                <ci> b </ci>
+                <apply>
+                  <abs/>
+                  <apply>
+                    <minus/>
+                    <ci> a </ci>
+                    <ci> b </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="imm1_np" name="irreversible michaelis-menten: one substrate, no product" metaid="_8a3194eb_0ca6_477f_8c49_6f1af1807bf0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V </ci>
+                  <ci> S </ci>
+                </apply>
+                <ci> KS </ci>
+              </apply>
+              <apply>
+                <plus/>
+                <cn type="integer"> 1 </cn>
+                <apply>
+                  <divide/>
+                  <ci> S </ci>
+                  <ci> KS </ci>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="rmm2_3i" name="reversible michaelis-menten: two substrates, two products, three inhibitors, non-competitive inhibition" metaid="_42ea7538_528e_4f5b_b964_3a6703b579dd">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> i1 </ci>
+            </bvar>
+            <bvar>
+              <ci> i2 </ci>
+            </bvar>
+            <bvar>
+              <ci> i3 </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ki1 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ki2 </ci>
+            </bvar>
+            <bvar>
+              <ci> Ki3 </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <apply>
+                  <divide/>
+                  <ci> V </ci>
+                  <apply>
+                    <times/>
+                    <ci> KS1 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> S1 </ci>
+                    <ci> S2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <ci> Keq </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> i1 </ci>
+                    <ci> Ki1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> i2 </ci>
+                    <ci> Ki2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> i3 </ci>
+                    <ci> Ki3 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="min" name="min" metaid="_7ccc0ee1_eac2_48e9_9518_e50c22310ca6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> a </ci>
+            </bvar>
+            <bvar>
+              <ci> b </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <minus/>
+                <apply>
+                  <plus/>
+                  <ci> a </ci>
+                  <ci> b </ci>
+                </apply>
+                <apply>
+                  <abs/>
+                  <apply>
+                    <minus/>
+                    <ci> a </ci>
+                    <ci> b </ci>
+                  </apply>
+                </apply>
+              </apply>
+              <cn type="integer"> 2 </cn>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="imm2_np" name="irreversible michaelis-menten: two substrates, no products" metaid="c1236b15_92d3_4137_947e_10e70d2fbc98">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KS2 </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> V </ci>
+                  <ci> S1 </ci>
+                  <ci> S2 </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> KS1 </ci>
+                  <ci> KS2 </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="ugp_fun" name="UGP kinetics" metaid="edc6507d_a470_4f42_b4d6_eec2c4f4cf60">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> UTP </ci>
+            </bvar>
+            <bvar>
+              <ci> G1P </ci>
+            </bvar>
+            <bvar>
+              <ci> UDG </ci>
+            </bvar>
+            <bvar>
+              <ci> Vmax </ci>
+            </bvar>
+            <bvar>
+              <ci> Kutp </ci>
+            </bvar>
+            <bvar>
+              <ci> Kiutp </ci>
+            </bvar>
+            <bvar>
+              <ci> Kg1p </ci>
+            </bvar>
+            <bvar>
+              <ci> Kiudg </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <divide/>
+                <apply>
+                  <times/>
+                  <ci> Vmax </ci>
+                  <ci> UTP </ci>
+                  <ci> G1P </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> Kutp </ci>
+                  <ci> Kg1p </ci>
+                </apply>
+              </apply>
+              <apply>
+                <plus/>
+                <apply>
+                  <divide/>
+                  <ci> Kiutp </ci>
+                  <ci> Kutp </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> UTP </ci>
+                  <ci> Kutp </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <ci> G1P </ci>
+                  <ci> Kg1p </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> UTP </ci>
+                    <ci> G1P </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Kutp </ci>
+                    <ci> Kg1p </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <apply>
+                      <divide/>
+                      <ci> Kiutp </ci>
+                      <ci> Kutp </ci>
+                    </apply>
+                    <ci> UDG </ci>
+                  </apply>
+                  <ci> Kiudg </ci>
+                </apply>
+                <apply>
+                  <divide/>
+                  <apply>
+                    <times/>
+                    <ci> G1P </ci>
+                    <ci> UDG </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> Kg1p </ci>
+                    <ci> Kiudg </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+      <functionDefinition id="hxk_t6p" name="HXK inhibition by T6P" metaid="_91bc7be3_234d_4574_ae17_0efa5b560e23">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <lambda>
+            <bvar>
+              <ci> S1 </ci>
+            </bvar>
+            <bvar>
+              <ci> S2 </ci>
+            </bvar>
+            <bvar>
+              <ci> P1 </ci>
+            </bvar>
+            <bvar>
+              <ci> P2 </ci>
+            </bvar>
+            <bvar>
+              <ci> I </ci>
+            </bvar>
+            <bvar>
+              <ci> V </ci>
+            </bvar>
+            <bvar>
+              <ci> KS1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KS2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP1 </ci>
+            </bvar>
+            <bvar>
+              <ci> KP2 </ci>
+            </bvar>
+            <bvar>
+              <ci> KI </ci>
+            </bvar>
+            <bvar>
+              <ci> Keq </ci>
+            </bvar>
+            <apply>
+              <divide/>
+              <apply>
+                <times/>
+                <ci> V </ci>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> S1 </ci>
+                      <ci> S2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KS2 </ci>
+                    </apply>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <apply>
+                      <times/>
+                      <ci> P1 </ci>
+                      <ci> P2 </ci>
+                    </apply>
+                    <apply>
+                      <times/>
+                      <ci> KS1 </ci>
+                      <ci> KS2 </ci>
+                      <ci> Keq </ci>
+                    </apply>
+                  </apply>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S1 </ci>
+                    <ci> KS1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P1 </ci>
+                    <ci> KP1 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> I </ci>
+                    <ci> KI </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <plus/>
+                  <cn type="integer"> 1 </cn>
+                  <apply>
+                    <divide/>
+                    <ci> S2 </ci>
+                    <ci> KS2 </ci>
+                  </apply>
+                  <apply>
+                    <divide/>
+                    <ci> P2 </ci>
+                    <ci> KP2 </ci>
+                  </apply>
+                </apply>
+              </apply>
+            </apply>
+          </lambda>
+        </math>
+      </functionDefinition>
+    </listOfFunctionDefinitions>
+    <listOfUnitDefinitions>
+      <unitDefinition id="substance" name="mmol" metaid="b029cb44_ac52_4fad_bb00_da28f2e05d55">
+        <listOfUnits>
+          <unit scale="-3" metaid="a73470db_29da_4ce8_85d5_45d3125145b4" kind="mole"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="mM" name="mM" metaid="e88d9ba5_d8c7_4910_a1c1_eab41b9b428d">
+        <listOfUnits>
+          <unit scale="-3" metaid="_6f477200_55ce_48db_a6e6_9a7d8e51f9a9" kind="mole"/>
+          <unit exponent="-1" metaid="_4571035e_bdf3_4a0a_b4cc_bac4a99ef548" kind="litre"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="mM_per_second" name="mM per second" metaid="_0bc22357_9f51_44e8_821e_bf07ceb27b2f">
+        <listOfUnits>
+          <unit scale="-3" metaid="_0bb7fedf_93b6_4002_9c82_a872919a5892" kind="mole"/>
+          <unit exponent="-1" metaid="_07841962_c513_4453_9364_f3c0c2c0759e" kind="litre"/>
+          <unit exponent="-1" metaid="_50666a83_c80a_4b8b_a69f_05dead056390" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_second" name="per second" metaid="_44da00b0_9b1d_4c66_96a1_adfdf9cfadd0">
+        <listOfUnits>
+          <unit exponent="-1" metaid="_406f7768_75a5_4b3f_9998_5faeb184e88f" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_mM_per_second" name="per mM per second" metaid="_4693c189_a705_4586_8d70_4fb6894e5ba4">
+        <listOfUnits>
+          <unit scale="-3" exponent="-1" metaid="_99cd0b8c_609b_4955_98f8_945f47a74c69" kind="mole"/>
+          <unit metaid="e138838f_3180_416d_937b_4fadbf414125" kind="litre"/>
+          <unit exponent="-1" metaid="_7161c970_d751_4110_87e3_f3ed589cc721" kind="second"/>
+        </listOfUnits>
+      </unitDefinition>
+      <unitDefinition id="per_mmol" name="per mmol" metaid="_6bb7abfe_1fea_4211_8ed7_4f45bdd5660e">
+        <listOfUnits>
+          <unit scale="-3" exponent="-1" metaid="ac3d0e21_1e0d_403e_ba50_53a9128d587b" kind="mole"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="cell" name="cell" metaid="meta_cell" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_cell">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005829"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+      <compartment id="extracellular" name="extracellular" metaid="meta_extracellular" size="1">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_extracellular">
+              <bqmodel:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0005576"/>
+                </rdf:Bag>
+              </bqmodel:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </compartment>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="ADP" initialConcentration="1.29" name="ADP" metaid="meta_ADP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ADP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16761"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00008"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="ATP" initialConcentration="4.29" name="ATP" metaid="meta_ATP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ATP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15422"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00002"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="AcAld" initialConcentration="0.178140579850657" name="acetaldehyde" metaid="meta_AcAld" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_AcAld">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15343"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00084"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="BPG" initialConcentration="0.000736873499865602" name="1,3-bisphosphoglycerate" metaid="meta_BPG" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_BPG">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16001"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00236"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="DHAP" initialConcentration="0.290344213186674" name="dihydroxyacetone phosphate" metaid="meta_DHAP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_DHAP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16108"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00111"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="F16bP" initialConcentration="1.14580464751733" name="fructose 1,6-bisphosphate" metaid="meta_F16bP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_F16bP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28013"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C05378"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="F6P" initialConcentration="0.0588603054728053" name="fructose 6-phosphate" metaid="meta_F6P" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_F6P">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16084"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C05345"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="G1P" initialConcentration="0.13481212658623" name="glucose 1-phosphate" metaid="meta_G1P" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_G1P">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16077"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="G3P" initialConcentration="0.068500732297821" name="glycerol 3-phosphate" metaid="meta_G3P" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_G3P">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15978"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00093"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="G6P" initialConcentration="0.193120800911304" name="glucose 6-phosphate" metaid="meta_G6P" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_G6P">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17665"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00668"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="GAP" initialConcentration="0.0789727571926259" name="glyceraldehyde 3-phosphate" metaid="meta_GAP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GAP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:29052"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00118"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="GLC" initialConcentration="1.5700004483456" name="glucose" metaid="meta_GLC" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GLC">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00031"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="NAD" initialConcentration="1.50329030201531" name="NAD" metaid="meta_NAD" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_NAD">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15846"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00003"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="P2G" initialConcentration="0.0169344770274836" name="2-phosphoglycerate" metaid="meta_P2G" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_P2G">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17835"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00631"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="P3G" initialConcentration="0.117456252783611" name="3-phosphoglycerate" metaid="meta_P3G" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_P3G">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17794"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00197"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="PEP" initialConcentration="0.152501353339511" name="phosphoenolpyruvate" metaid="meta_PEP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PEP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18021"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00074"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="PYR" initialConcentration="0.527117851793548" name="pyruvate" metaid="meta_PYR" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PYR">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:15361"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00022"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="T6P" initialConcentration="0.02" name="trehalose 6-phosphate" metaid="meta_T6P" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_T6P">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18283"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="UDP" initialConcentration="0.2815" name="UDP" metaid="meta_UDP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_UDP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17659"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="UTP" initialConcentration="0.6491" name="UTP" metaid="meta_UTP" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_UTP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:46398"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="AMP" initialConcentration="0.44" name="AMP" metaid="meta_AMP" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_AMP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16027"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00020"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="NADH" initialConcentration="0.0867096979846952" name="NADH" metaid="meta_NADH" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_NADH">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16908"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00004"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="UDG" initialConcentration="0.467246194874247" constant="false" name="UDP glucose" metaid="meta_UDG" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_UDG">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:18066"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="ACE" initialConcentration="55.7500633495734" constant="true" name="acetate" metaid="meta_ACE" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ACE">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30089"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="EtOH" initialConcentration="55.472577854384" constant="true" name="ethanol" metaid="meta_EtOH" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_EtOH">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16236"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00469"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="F26bP" initialConcentration="0.003" constant="true" name="fructose 2,6-bisphosphate" metaid="meta_F26bP" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_F26bP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:28602"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00665"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="GLCx" initialConcentration="74" constant="true" name="glucose" metaid="meta_GLCx" boundaryCondition="true" sboTerm="SBO:0000247" compartment="extracellular">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GLCx">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:4167"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00031"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="GLY" initialConcentration="0.15" constant="true" name="glycerol" metaid="meta_GLY" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GLY">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:17754"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00116"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="SUC" initialConcentration="0" constant="true" name="succinate" metaid="meta_SUC" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_SUC">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:30031"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C00042"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="TRH" initialConcentration="0.00384697134241316" constant="true" name="trehalose" metaid="meta_TRH" boundaryCondition="true" sboTerm="SBO:0000247" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TRH">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/chebi/CHEBI:16551"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.compound/C01083"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="ADH1" initialConcentration="0.0409771277320022" constant="true" name="ADH1" metaid="meta_ADH1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="ADH5" initialConcentration="0.00106249605621922" constant="true" name="ADH5" metaid="meta_ADH5" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="CDC19" initialConcentration="0.512097526792801" constant="true" name="CDC19" metaid="meta_CDC19" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="ENO1" initialConcentration="0.171592988538958" constant="true" name="ENO1" metaid="meta_ENO1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="ENO2" initialConcentration="0.493611573294543" constant="true" name="ENO2" metaid="meta_ENO2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="FBA1" initialConcentration="0.0367018202831552" constant="true" name="FBA1" metaid="meta_FBA1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="GLK1" initialConcentration="0.0112717406104807" constant="true" name="GLK1" metaid="meta_GLK1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="GPD1" initialConcentration="0.00170877794272468" constant="true" name="GPD1" metaid="meta_GPD1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="GPD2" initialConcentration="0.000198351416606057" constant="true" name="GPD2" metaid="meta_GPD2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="GPM1" initialConcentration="0.182500074724267" constant="true" name="GPM1" metaid="meta_GPM1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="HOR2" initialConcentration="0.0013683673909939" constant="true" name="HOR2" metaid="meta_HOR2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="HXK1" initialConcentration="0.0041951864287446" constant="true" name="HXK1" metaid="meta_HXK1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="HXK2" initialConcentration="0.0153328384926289" constant="true" name="HXK2" metaid="meta_HXK2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PDC1" initialConcentration="0.266952694557084" constant="true" name="PDC1" metaid="meta_PDC1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PDC5" initialConcentration="0.00308868608169189" constant="true" name="PDC5" metaid="meta_PDC5" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PDC6" initialConcentration="0.0016352160527653" constant="true" name="PDC6" metaid="meta_PDC6" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PFK1" initialConcentration="0.0116962574765781" constant="true" name="PFK1" metaid="meta_PFK1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PFK2" initialConcentration="0.00975915538330228" constant="true" name="PFK2" metaid="meta_PFK2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PGI1" initialConcentration="0.0345726768225249" constant="true" name="PGI1" metaid="meta_PGI1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PGK1" initialConcentration="0.0644142281647388" constant="true" name="PGK1" metaid="meta_PGK1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="PGM1" initialConcentration="0.000815573865768647" constant="true" name="PGM1" metaid="meta_PGM1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PGM1">
+              <bqbiol:isEncodedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/sgd/S000001610"/>
+                </rdf:Bag>
+              </bqbiol:isEncodedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P33401"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="PGM2" initialConcentration="0.00031467219294138" constant="true" name="PGM2" metaid="meta_PGM2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PGM2">
+              <bqbiol:isEncodedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/sgd/S000004711"/>
+                </rdf:Bag>
+              </bqbiol:isEncodedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P37012"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="PYK2" initialConcentration="0.00151748381804475" constant="true" name="PYK2" metaid="meta_PYK2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="RHR2" initialConcentration="0.0127951193429578" constant="true" name="RHR2" metaid="meta_RHR2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="TDH1" initialConcentration="0.087716160700349" constant="true" name="TDH1" metaid="meta_TDH1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="TDH2" initialConcentration="0" constant="true" name="TDH2" metaid="meta_TDH2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="TDH3" initialConcentration="1.05110118662137" constant="true" name="TDH3" metaid="meta_TDH3" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="TPI1" initialConcentration="0.073589454911377" constant="true" name="TPI1" metaid="meta_TPI1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell"/>
+      <species id="TPS1" initialConcentration="0.000848120435592663" constant="true" name="TPS1" metaid="meta_TPS1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TPS1">
+              <bqbiol:isEncodedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/sgd/S000000330"/>
+                </rdf:Bag>
+              </bqbiol:isEncodedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/Q00764"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="TPS2" initialConcentration="0.000664962953368736" constant="true" name="TPS2" metaid="meta_TPS2" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TPS2">
+              <bqbiol:isEncodedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/sgd/S000002481"/>
+                </rdf:Bag>
+              </bqbiol:isEncodedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P31688"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+      <species id="UGP1" initialConcentration="0.00155052854965178" constant="true" name="UGP1" metaid="meta_UGP1" boundaryCondition="true" sboTerm="SBO:0000252" compartment="cell">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_UGP1">
+              <bqbiol:isEncodedBy>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/sgd/S000001518"/>
+                </rdf:Bag>
+              </bqbiol:isEncodedBy>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/uniprot/P32861"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+      </species>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="Keq_HXK" metaid="dd6ab782_4911_4757_964a_8237b83759d7" value="2000" units="dimensionless"/>
+      <parameter id="NA" name="Avogadro constant" metaid="_13d70d1c_3665_456b_97dd_942da8a91fc2" value="6.022140000000001E20" units="per_mmol"/>
+      <parameter id="rescale_TRH" metaid="_5643c57c_dc9d_4867_9be6_e748f1b87728" value="38.8857" units="dimensionless"/>
+      <parameter id="sum_AXP" metaid="_5a6e3a10_0a88_48d8_a25b_30c94c0f8a26" value="6.02" units="mM"/>
+      <parameter id="sum_NAD" metaid="_934c7b6b_71d2_4d08_a37e_4225e57e11df" value="1.59" units="mM"/>
+      <parameter id="sum_UXP" metaid="_06da2369_87dd_4421_8ad6_86a1fb01679f" value="1.39784619487425" units="mM"/>
+      <parameter id="volume" name="volume" metaid="ad5542a1_82d2_4a1e_9bdf_aed340e91ba3" value="2E-14" units="litre"/>
+      <parameter id="energy_charge" constant="false" metaid="_994d8e4b_d92d_464e_aa73_71e9f4bea4d2" units="dimensionless"/>
+      <parameter id="fit_conc" constant="false" metaid="_7ba41632_e312_44a4_b824_4665c538ab68" units="dimensionless"/>
+      <parameter id="sum_PXG" constant="false" name="glycerate phosphates" metaid="_1fa1f7ac_27d7_4918_8bbd_ec0787f3d1f9" units="mM"/>
+    </listOfParameters>
+    <listOfInitialAssignments>
+      <initialAssignment symbol="ADH1" metaid="e4f1c83d_4bd1_47b1_9d01_c9449dc86adf">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 493540 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ADH5" metaid="_1f809f75_8c99_476c_8d8c_0410cf747179">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 12797 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ACE" metaid="_22af3225_03bd_4551_93a1_d6b42d0fae70">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 671469373 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="CDC19" metaid="a46ca6db_d7ad_49a6_b586_b5de7315911f">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 6167846 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="DHAP" metaid="_1db3e81a_aa70_4c14_87b3_ded9abd40b09">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 3496987 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="EtOH" metaid="af76fc86_1d7c_486e_942b_29b1bb887f34">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 668127260 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ENO1" metaid="_495be0ad_4efd_4224_8228_f9535d279969">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 2066714 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="ENO2" metaid="_86fb88e1_3a7d_4614_a11b_e6f5f3f23552">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 5945196 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="F16bP" metaid="_11209af6_d94b_4afb_afd6_8b3a263894ff">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 13800392 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="F6P" metaid="_0a7871ee_fefc_4296_96f5_b6f0e9809ae7">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 708930 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="FBA1" metaid="_85baf2f7_ff62_4b18_a1d8_d11d37df7c99">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 442047 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="G6P" metaid="cd1258dc_3e4a_486d_a29e_4f124981e2ce">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 2326001 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GAP" metaid="_3f9a9db9_55c3_488c_b8fa_eb5ec555ddf6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 951170 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GLC" metaid="d20ca3f1_8989_4bab_8a40_5bdb572bd073">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 18909525 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GPM1" metaid="bd415951_2b7d_40b2_b500_efe3ce09b4d5">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 2198082 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GLK1" metaid="_7a17b0f1_d73d_4cc9_9efb_9c080424a09c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 135760 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="G3P" metaid="_4e766583_fcdd_4cc7_854d_d3a8a65f2845">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 825042 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GPD1" metaid="_92fa2dd0_4fab_49ef_9c35_0a080036ebf6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 20581 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="GPD2" metaid="_408315d4_1d66_4104_9cc0_07ae7450b538">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 2389 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="G1P" metaid="_236e0ee4_4439_496e_926a_e783ed2c8e3c">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 1623715 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="HXK1" metaid="_78d90a1f_c7ea_44ef_892c_2d9942b3660d">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 50528 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="HXK2" metaid="_0a30e48d_7b97_4448_969d_5493d88788c9">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 184673 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="HOR2" metaid="cf524999_17a7_4649_825e_865a6c5bdcfa">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 16481 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PEP" metaid="a864c101_7fa9_4168_a63a_eeb6d7cf2e05">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 1836769 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PYR" metaid="_8ba82fab_707f_423e_b857_53d4de5b807a">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 6348755 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PDC1" metaid="_8cd48137_b363_48a0_a106_1a70028bbfb1">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 3215253 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PDC5" metaid="bb0e0a13_420f_4126_9ecf_276c834afcd9">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 37201 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PDC6" metaid="_69405825_48bb_414e_8670_94fe1560af60">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 19695 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PFK1" metaid="_87cf1480_b4c3_447e_a3aa_2cc19316c6c7">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 140873 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PFK2" metaid="cb87c22c_49f6_4721_be11_54ea77802bde">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 117542 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PGI1" metaid="dd3b7f8c_b5ce_450e_b567_5877d3dadf10">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 416403 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PGK1" metaid="_44cfee97_1766_4a5c_b400_0669199240a6">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 775823 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PYK2" metaid="_129dd6e0_fc14_4758_a5a8_5d7be9084114">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 18277 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PGM1" metaid="_7b966071_da4e_46a2_ab00_43175088a9b0">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 9823 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="PGM2" metaid="_445cc650_cce3_4ec6_a111_966d7bca3b45">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 3790 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="RHR2" metaid="_5d4180f8_d8bf_4087_9aa2_7c92ffff7fac">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn type="integer"> 154108 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TRH" metaid="_3a3457c7_b417_40f9_aef3_c8923995d726">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 46334 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TDH1" metaid="_26ddeebe_7517_4a7e_a3da_87975e0aff06">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 1056478 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TDH3" metaid="_23c3740e_34a9_43bd_887f_caef3877ee13">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 12659757 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TPI1" metaid="_61d1d16f_87ed_4d91_8435_359ca4e311b2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 886332 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TPS1" metaid="_8eebfb80_5f76_4088_bb25_cf356b12b7c4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 10215 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="TPS2" metaid="e7461309_53f3_4f21_92a5_8a6c80ab2fb4">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 8009 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+      <initialAssignment symbol="UGP1" metaid="bbd71a9a_73fe_49ec_88aa_5b20c758d4f2">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <divide/>
+              <cn> 18675 </cn>
+              <ci> volume </ci>
+            </apply>
+            <ci> NA </ci>
+          </apply>
+        </math>
+      </initialAssignment>
+    </listOfInitialAssignments>
+    <listOfRules>
+      <assignmentRule metaid="b128a647_35f5_46f5_afb6_3b3b85f13251" variable="AMP">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <ci> sum_AXP </ci>
+                <ci> ATP </ci>
+              </apply>
+              <ci> ADP </ci>
+            </apply>
+            <cn type="integer"> 0 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="a50eb712_c669_48d6_920b_952e3d43a976" variable="NADH">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <minus/>
+              <ci> sum_NAD </ci>
+              <ci> NAD </ci>
+            </apply>
+            <cn type="integer"> 0 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="f469d801_1a7d_46a6_bd3b_ea38f9646328" variable="UDG">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <ci> max </ci>
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <ci> sum_UXP </ci>
+                <ci> UTP </ci>
+              </apply>
+              <ci> UDP </ci>
+            </apply>
+            <cn type="integer"> 0 </cn>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_574c3c5a_101e_4c01_b317_88f2ae2ef5b3" variable="energy_charge">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <divide/>
+            <apply>
+              <plus/>
+              <ci> ATP </ci>
+              <apply>
+                <divide/>
+                <ci> ADP </ci>
+                <cn type="integer"> 2 </cn>
+              </apply>
+            </apply>
+            <ci> sum_AXP </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="e9c90458_cebe_4d73_ae46_fc3f9be9e7cf" variable="fit_conc">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <root/>
+            <degree>
+              <cn type="integer"> 2 </cn>
+            </degree>
+            <apply>
+              <divide/>
+              <apply>
+                <plus/>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> DHAP </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 3496987 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> F16bP </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 13800392 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> F6P </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 708930 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> G6P </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 2326001 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GAP </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 951170 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> GLC </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 18909525 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> PEP </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 1836769 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> PYR </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 6348755 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+                <apply>
+                  <power/>
+                  <apply>
+                    <minus/>
+                    <cn type="integer"> 1 </cn>
+                    <apply>
+                      <divide/>
+                      <apply>
+                        <times/>
+                        <ci> sum_PXG </ci>
+                        <ci> volume </ci>
+                        <ci> NA </ci>
+                      </apply>
+                      <cn type="integer"> 1618640 </cn>
+                    </apply>
+                  </apply>
+                  <cn type="integer"> 2 </cn>
+                </apply>
+              </apply>
+              <cn type="integer"> 9 </cn>
+            </apply>
+          </apply>
+        </math>
+      </assignmentRule>
+      <assignmentRule metaid="_39fa5da1_b40e_4b03_9dba_5c87ae8263c7" variable="sum_PXG">
+        <math xmlns="http://www.w3.org/1998/Math/MathML">        
+          <apply>
+            <plus/>
+            <ci> P2G </ci>
+            <ci> P3G </ci>
+          </apply>
+        </math>
+      </assignmentRule>
+    </listOfRules>
+    <listOfReactions>
+      <reaction id="ADH" name="alcohol dehydrogenase" metaid="meta_ADH" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ADH">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00754"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004022"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="AcAld" metaid="cd9f9c02_c981_42e0_a417_0304f82804e8"/>
+          <speciesReference species="NADH" metaid="_52561bc8_fa04_4557_8604_804726d302d0"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="EtOH" metaid="_25103714_ed33_4200_bd08_137e84dbbe17"/>
+          <speciesReference species="NAD" metaid="cd30e1e2_ce3e_4979_a2ec_238797ad1c19"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADH1" metaid="d8c69deb_2ce2_459b_9465_bea965a37f10"/>
+          <modifierSpeciesReference species="ADH5" metaid="_6b317b29_9265_42d1_9879_7f2b65f99e1c"/>
+          <modifierSpeciesReference species="AcAld"/>
+          <modifierSpeciesReference species="NADH"/>
+          <modifierSpeciesReference species="EtOH"/>
+          <modifierSpeciesReference species="NAD"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_0f56d64f_a452_4643_850f_3be2fd3b47de">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm_bb </ci>
+                <ci> AcAld </ci>
+                <ci> NADH </ci>
+                <ci> EtOH </ci>
+                <ci> NAD </ci>
+                <ci> Vmax </ci>
+                <ci> Kacald </ci>
+                <ci> Kiacald </ci>
+                <ci> Knadh </ci>
+                <ci> Kinadh </ci>
+                <ci> Ketoh </ci>
+                <ci> Kietoh </ci>
+                <ci> Knad </ci>
+                <ci> Kinad </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="b7a4a94a_e2b5_43ea_a297_13d58e78ead1" value="111.334973497906" units="mM_per_second"/>
+            <parameter id="Ketoh" metaid="a19ff860_1a80_44f6_bd81_0dd87a62d7ce" value="17" units="mM"/>
+            <parameter id="Kinad" metaid="cb94681a_9bdf_4185_b379_29dbfbd5f3d1" value="0.92" units="mM"/>
+            <parameter id="Keq" metaid="_2fd027d7_3cfd_4c5e_b9c9_266d64480ce6" value="1.44927536231884E4" units="dimensionless"/>
+            <parameter id="Knad" metaid="fcc250be_bfb1_49f2_b484_6fafa3598361" value="0.17" units="mM"/>
+            <parameter id="Knadh" metaid="_6a8b61e9_ace7_4dfd_ad18_0ca5a7394daa" value="0.11" units="mM"/>
+            <parameter id="Kinadh" metaid="_780ec73b_f87a_46ad_afd5_74ae12ad4b4b" value="0.031" units="mM"/>
+            <parameter id="Kacald" metaid="_9b77f3b6_04e4_41ed_b22e_432975f5e3aa" value="1.11" units="mM"/>
+            <parameter id="Kiacald" metaid="_8d9e404c_71dd_4291_9014_67dca0db2bae" value="1.1" units="mM"/>
+            <parameter id="Kietoh" metaid="e82c4803_2d2b_41e1_9616_9e530a29e530" value="90" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="AK" name="adenylate kinase" metaid="meta_AK" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_AK">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.4.3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004017"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00127"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="ADP" metaid="f6da00aa_598e_4506_ba21_fc48536ea552" stoichiometry="2"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP" metaid="d980a108_b1d8_4e87_abe1_5334a1c4b296"/>
+          <speciesReference species="AMP" metaid="_01f6482a_a3b9_46db_9f0a_85f0e5713211"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="AMP"/>
+          <modifierSpeciesReference species="ATP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="e3c9140b_2740_42cd_bfb5_49e9a7db4a03">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rma </ci>
+                <apply>
+                  <times/>
+                  <ci> ADP </ci>
+                  <ci> ADP </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> AMP </ci>
+                  <ci> ATP </ci>
+                </apply>
+                <ci> k </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="k" metaid="_0c2f531f_2319_44d5_b2c3_987093c9e7d3" value="0.75" units="per_mM_per_second"/>
+            <parameter id="Keq" metaid="_8bac45a0_a8e6_4cc5_8079_28c5314ad3b2" value="0.45" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ATPase" name="ATPase" metaid="meta_ATPase" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ATPase">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0016887"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="ATP" metaid="_69cfe912_afb5_499b_88ff_2c07d6ee9090"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ADP" metaid="b3d52e26_b740_4338_ad9c_766ebee07fee"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ATP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="d4904a3b_6a98_4db3_a9e4_57484504dced">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> imm1_np </ci>
+                <ci> ATP </ci>
+                <ci> Vmax </ci>
+                <ci> Katp </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_2917c798_8609_4598_86c3_1bda71120b6f" value="1.13333333333333" units="mM_per_second"/>
+            <parameter id="Katp" metaid="_45954ecd_6fee_4fcb_a91c_ea768418acd5" value="3" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="ENO" name="enolase" metaid="meta_ENO" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_ENO">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00658"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.2.1.11"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004634"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="P2G" metaid="_0c54cafc_59c9_4cb4_99ff_db6316d8c2db"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="PEP" metaid="b0ab0a61_1b99_494b_9576_43b1e78285d4"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ENO1" metaid="_42a8268a_61bf_4fca_a2ac_9c46ae5faf5e"/>
+          <modifierSpeciesReference species="ENO2" metaid="_9a019600_c2f5_4815_9cb7_61a410958004"/>
+          <modifierSpeciesReference species="P2G"/>
+          <modifierSpeciesReference species="PEP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_93f0a77e_3575_4949_ac2c_43e482c87db1">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm1 </ci>
+                <ci> P2G </ci>
+                <ci> PEP </ci>
+                <ci> Vmax </ci>
+                <ci> Kp2g </ci>
+                <ci> Kpep </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_65f576bd_f600_46a3_990a_2701ad35b6e2" value="3.36" units="mM_per_second"/>
+            <parameter id="Kp2g" metaid="_2839d9de_1fb7_465e_a27e_a2508f4aff2d" value="0.04" units="mM"/>
+            <parameter id="Keq" metaid="b7769bb9_3b96_4f0d_af0d_51aa0abc90a1" value="6.7" units="dimensionless"/>
+            <parameter id="Kpep" metaid="_1f9eaf22_3e61_44ab_99c3_08118af2df85" value="0.5" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="FBA" name="fructosebisphosphate aldolase" metaid="meta_FBA" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_FBA">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01068"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.2.13"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004332"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="F16bP" metaid="_56df735c_6cdb_40da_a34e_1b3005b4609d"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="DHAP" metaid="af4557ea_8093_4f79_ae91_96bd30f76581"/>
+          <speciesReference species="GAP" metaid="c40aca33_f683_465e_9d9d_f594dca81dbe"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="FBA1" metaid="_6f802fb8_7f7b_4aaf_8a5e_a0020efde5a4"/>
+          <modifierSpeciesReference species="F16bP"/>
+          <modifierSpeciesReference species="DHAP"/>
+          <modifierSpeciesReference species="GAP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="ac48b10d_e81b_4dcc_932b_263ae540a3a5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm_ub </ci>
+                <ci> F16bP </ci>
+                <ci> DHAP </ci>
+                <ci> GAP </ci>
+                <ci> Vmax </ci>
+                <ci> Kf16bp </ci>
+                <ci> Kdhap </ci>
+                <ci> Kgap </ci>
+                <ci> Kigap </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_95b1c685_3abf_4a57_ada0_5edad8f24728" value="1.57816666666667" units="mM_per_second"/>
+            <parameter id="Kf16bp" metaid="_30e53c76_ae84_4277_a35d_ef2fa2377c91" value="0.3" units="mM"/>
+            <parameter id="Keq" metaid="fe3e6802_19a1_4b71_9171_16887b883630" value="0.069" units="mM"/>
+            <parameter id="Kdhap" metaid="_66d07921_b9f0_4311_aa01_7631bc2216c7" value="2" units="mM"/>
+            <parameter id="Kgap" metaid="e6c69bbf_3ac9_458a_9246_cfa6c65afd4d" value="2.4" units="mM"/>
+            <parameter id="Kigap" metaid="_1f074531_e992_4d8b_ba76_c5df15e18092" value="10" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="GPD" name="glycerol 3-phosphate dehydrogenase" metaid="meta_GPD" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GPD">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/1.1.1.94"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00842"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DHAP" metaid="a8667a30_37d3_4e48_a249_bbe6775f4bf0"/>
+          <speciesReference species="NADH" metaid="_6b036d2d_79fc_42bd_8ecd_cb934432dcb1"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G3P" metaid="_65af0ec8_abb8_40a7_98cc_8439bf3849d2"/>
+          <speciesReference species="NAD" metaid="_1c16b816_0a1d_456a_9b9a_00ff933dac63"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="ADP" metaid="_97576818_87f6_4a57_adcf_0d30003ace29"/>
+          <modifierSpeciesReference species="ATP" metaid="ad1a61ee_08d6_4919_943a_211b4f868ac8"/>
+          <modifierSpeciesReference species="F16bP" metaid="_2acaab4d_649d_4dc5_8b33_330596b85bb2"/>
+          <modifierSpeciesReference species="GPD1" metaid="_0575f049_a7d9_4870_b178_4d5c95153876"/>
+          <modifierSpeciesReference species="GPD2" metaid="_4f43eaaa_b973_44f5_8323_326e26429447"/>
+          <modifierSpeciesReference species="DHAP"/>
+          <modifierSpeciesReference species="NADH"/>
+          <modifierSpeciesReference species="G3P"/>
+          <modifierSpeciesReference species="NAD"/>
+          <modifierSpeciesReference species="F16bP"/>
+          <modifierSpeciesReference species="ATP"/>
+          <modifierSpeciesReference species="ADP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="ff167c05_5f80_4c76_90f3_903e2a9b9cd8">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm2_3i </ci>
+                <ci> DHAP </ci>
+                <ci> NADH </ci>
+                <ci> G3P </ci>
+                <ci> NAD </ci>
+                <ci> F16bP </ci>
+                <ci> ATP </ci>
+                <ci> ADP </ci>
+                <ci> Vmax </ci>
+                <ci> Kdhap </ci>
+                <ci> Knadh </ci>
+                <ci> Kg3p </ci>
+                <ci> Knad </ci>
+                <ci> Kfbp </ci>
+                <ci> Katp </ci>
+                <ci> Kadp </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_0597e2bb_a3ce_451b_9fed_50be250f5995" value="0.783333333333333" units="mM_per_second"/>
+            <parameter id="Knadh" metaid="c4fe9d6b_1c02_41af_91fe_0cfb854e82d1" value="0.023" units="mM"/>
+            <parameter id="Kdhap" metaid="_84c8c715_e47f_4139_9fb6_3b2e6d4185b0" value="0.54" units="mM"/>
+            <parameter id="Keq" metaid="_438fe47b_6e38_4c89_9ddb_2017faf9a568" value="10000" units="dimensionless"/>
+            <parameter id="Kfbp" metaid="caeece8c_3b9f_4914_808a_9882cb39fa61" value="4.8" units="mM"/>
+            <parameter id="Katp" metaid="ae46dcca_35e5_4991_912b_a31795ac646a" value="0.73" units="mM"/>
+            <parameter id="Kadp" metaid="_3ca9f7ae_62bb_48d8_99cc_7983f694d704" value="2" units="mM"/>
+            <parameter id="Knad" metaid="_55514c76_7bac_4880_b7da_c31311bfa9d1" value="0.93" units="mM"/>
+            <parameter id="Kg3p" metaid="abcdf63c_b47d_45df_85fa_fbcae9a93bc2" value="1.2" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="GPM" name="phosphoglyceromutase" metaid="meta_GPM" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GPM">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/5.4.2.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004619"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01518"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="P3G" metaid="a754a932_502e_4196_9d98_5b6845ffe2ef"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="P2G" metaid="ad9b448e_8623_41fa_9ad2_65b4a5c95a8a"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GPM1" metaid="_6bbf4916_d2ea_4e25_86de_bfcff96b8d4c"/>
+          <modifierSpeciesReference species="P3G"/>
+          <modifierSpeciesReference species="P2G"/>
+        </listOfModifiers>
+        <kineticLaw metaid="d3db174e_4ece_4142_9027_e34b2b798a77">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm1 </ci>
+                <ci> P3G </ci>
+                <ci> P2G </ci>
+                <ci> Vmax </ci>
+                <ci> Kp3g </ci>
+                <ci> Kp2g </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="f229eaa0_aa42_4c4f_b808_eaf214d8255b" value="43.0833333333333" units="mM_per_second"/>
+            <parameter id="Kp3g" metaid="b70685a3_8251_4f01_8155_fe7f25026c64" value="1.2" units="mM"/>
+            <parameter id="Keq" metaid="_06c0a80e_5382_4433_910b_8dd6dac0d4b9" value="0.19" units="dimensionless"/>
+            <parameter id="Kp2g" metaid="_3ea77906_e60d_4930_91a4_2a26a9684f67" value="0.08" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="GPP" name="glycerol 3-phosphatase" metaid="meta_GPP" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_GPP">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/3.1.3.21"/>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00841"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="G3P" metaid="_7094c6fe_d735_4f42_8a20_32cb655295ac"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLY" metaid="_29162b29_8530_44ef_8a60_058667d7cf6d"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="HOR2" metaid="_2f23ec0f_84b6_40b6_bd6e_48761dbb6626"/>
+          <modifierSpeciesReference species="RHR2" metaid="_536699e7_fab5_48ba_bbbe_f0ea3b46d80b"/>
+          <modifierSpeciesReference species="G3P"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_0359be8b_f375_42dc_9a77_981b8964f282">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> imm1_np </ci>
+                <ci> G3P </ci>
+                <ci> Vmax </ci>
+                <ci> Kg3p </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="d514e766_6c5e_457e_8210_f5c1ea416bbd" value="0.883333333333333" units="mM_per_second"/>
+            <parameter id="Kg3p" metaid="d03b646d_4578_4392_8934_e85a2c06c12f" value="3.5" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="HXK_GLK1" name="hexokinase [GLK1]" metaid="meta_HXK_GLK1" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_HXK_GLK1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02848"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004396"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="GLC" metaid="_3cf2be32_7e15_4dd4_8b92_b21954be1efa"/>
+          <speciesReference species="ATP" metaid="_59ec809e_61ec_4411_8df5_61d8a2bc5d66"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" metaid="c68356ba_e242_49bd_9099_7a6387ce3d15"/>
+          <speciesReference species="ADP" metaid="dc0bc25b_4bfd_4e12_8212_1e6fcda965c5"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GLK1" metaid="b1d05443_84d6_44a9_a656_24de8035688f"/>
+          <modifierSpeciesReference species="GLC"/>
+          <modifierSpeciesReference species="ATP"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="GLK1"/>
+        </listOfModifiers>
+        <kineticLaw metaid="c39519d1_d0ad_46f5_8b70_70819abbcccb">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm2 </ci>
+                <ci> GLC </ci>
+                <ci> ATP </ci>
+                <ci> G6P </ci>
+                <ci> ADP </ci>
+                <apply>
+                  <times/>
+                  <ci> GLK1 </ci>
+                  <ci> kcat </ci>
+                </apply>
+                <ci> Kglc </ci>
+                <ci> Katp </ci>
+                <ci> Kg6p </ci>
+                <ci> Kadp </ci>
+                <ci> Keq_HXK </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="kcat" metaid="_9440d978_7cae_4c4a_b502_e3d315c4afdc" value="0.0721" units="per_second"/>
+            <parameter id="Kglc" metaid="a45ba910_8f94_4643_8b6b_376397e11a8d" value="0.0106" units="mM"/>
+            <parameter id="Katp" metaid="_9534a279_6b42_43f4_b5be_9b96ff7bc7af" value="0.865" units="mM"/>
+            <parameter id="Kg6p" metaid="a7d53107_1f3d_49f5_bc99_63fc2123032b" value="30" units="mM"/>
+            <parameter id="Kadp" metaid="_0059b9de_32cb_40a3_997a_5aed75352001" value="0.23" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="HXK_HXK1" name="hexokinase [HXK1]" metaid="meta_HXK_HXK1" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_HXK_HXK1">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02848"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004396"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="GLC" metaid="_54283e6c_c534_42a1_9025_3b2aa1649aba"/>
+          <speciesReference species="ATP" metaid="_5611a332_d5c9_41d3_8417_e41e539782e5"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" metaid="fc5c3d5c_5c05_4fec_a6ac_90fd606d1212"/>
+          <speciesReference species="ADP" metaid="_7d37f3e7_409f_48f0_9a45_ba990c755ff2"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="HXK1" metaid="_9311d0e1_c207_4707_bdb2_dbe8bed6495d"/>
+          <modifierSpeciesReference species="T6P" metaid="_9aa12213_5e88_4e5f_9ed6_d4a53cfd5f2a"/>
+          <modifierSpeciesReference species="GLC"/>
+          <modifierSpeciesReference species="ATP"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="T6P"/>
+          <modifierSpeciesReference species="HXK1"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_25011ebb_df87_41a4_9403_c64315034297">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> hxk_t6p </ci>
+                <ci> GLC </ci>
+                <ci> ATP </ci>
+                <ci> G6P </ci>
+                <ci> ADP </ci>
+                <ci> T6P </ci>
+                <apply>
+                  <times/>
+                  <ci> HXK1 </ci>
+                  <ci> kcat </ci>
+                </apply>
+                <ci> Kglc </ci>
+                <ci> Katp </ci>
+                <ci> Kg6p </ci>
+                <ci> Kadp </ci>
+                <ci> Kit6p </ci>
+                <ci> Keq_HXK </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="kcat" metaid="_431261b0_33aa_42ad_a6f3_b0dbf1bb141d" value="10.2" units="per_second"/>
+            <parameter id="Kglc" metaid="_4d74aecb_0c49_4048_a60d_da129410ee55" value="0.15" units="mM"/>
+            <parameter id="Katp" metaid="ecac0dd5_62ad_4cf4_b34f_95bef0ee9eef" value="0.293" units="mM"/>
+            <parameter id="Kg6p" metaid="e2777064_81ac_42e7_86f3_407dbde591c1" value="30" units="mM"/>
+            <parameter id="Kadp" metaid="b5eb1be7_8113_4b37_b3f3_d94ac63a6969" value="0.23" units="mM"/>
+            <parameter id="Kit6p" metaid="_0f3b1d7e_5019_4a5b_a198_ee20e6d2b527" value="0.2" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="HXK_HXK2" name="hexokinase [HXK2]" metaid="meta_HXK_HXK2" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_HXK_HXK2">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R02848"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004396"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="GLC" metaid="_3b744ab4_1efe_454d_8fc4_5340dfa3db8c"/>
+          <speciesReference species="ATP" metaid="c1f400e3_42a7_4fe5_8159_b383b98a9a21"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G6P" metaid="_6834d159_4ca2_4d17_9356_df86cbb8901a"/>
+          <speciesReference species="ADP" metaid="_16feb4ee_33a2_466c_b15e_dc99f953a74c"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="HXK2" metaid="_3603baf0_90d9_4bec_b82c_bc7859d4f50c"/>
+          <modifierSpeciesReference species="T6P" metaid="_8664d6de_aec9_4f3c_8e82_cd1dd72d9f50"/>
+          <modifierSpeciesReference species="GLC"/>
+          <modifierSpeciesReference species="ATP"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="T6P"/>
+          <modifierSpeciesReference species="HXK2"/>
+        </listOfModifiers>
+        <kineticLaw metaid="c9d7dd9e_6bbf_465f_99fd_ba18a042936a">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> hxk_t6p </ci>
+                <ci> GLC </ci>
+                <ci> ATP </ci>
+                <ci> G6P </ci>
+                <ci> ADP </ci>
+                <ci> T6P </ci>
+                <apply>
+                  <times/>
+                  <ci> HXK2 </ci>
+                  <ci> kcat </ci>
+                </apply>
+                <ci> Kglc </ci>
+                <ci> Katp </ci>
+                <ci> Kg6p </ci>
+                <ci> Kadp </ci>
+                <ci> Kit6p </ci>
+                <ci> Keq_HXK </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="kcat" metaid="acdebccb_26f6_4c5d_b8f7_371671845aed" value="63.1" units="per_second"/>
+            <parameter id="Kglc" metaid="_7b6e6507_7726_4f72_8979_77a48fdbb4bd" value="0.2" units="mM"/>
+            <parameter id="Katp" metaid="_359d319f_9a26_4c34_9532_e2f97cf15972" value="0.195" units="mM"/>
+            <parameter id="Kg6p" metaid="_5ace23e2_3994_4273_811a_ac4c9ceec09c" value="30" units="mM"/>
+            <parameter id="Kadp" metaid="_14fc3566_4f8b_4e4b_b144_b228fb3b8dd5" value="0.23" units="mM"/>
+            <parameter id="Kit6p" metaid="d02ff5aa_f53d_4b3a_9813_6dff39c08981" value="0.04" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PDC" name="pyruvate decarboxylase" metaid="meta_PDC" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PDC">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00636"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/4.1.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004737"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="PYR" metaid="a00e1244_321c_4a7c_83ac_344f4381fd89"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="AcAld" metaid="_24e25602_21e2_4078_8548_76362e78e674"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PDC1" metaid="_7779cd2f_1056_4f2d_9500_6b5de03848b0"/>
+          <modifierSpeciesReference species="PDC5" metaid="_533913ed_e0f4_48d6_bf8b_a80e3068d63e"/>
+          <modifierSpeciesReference species="PDC6" metaid="_357d53db_791d_4a19_82fd_b9e6c04239b0"/>
+          <modifierSpeciesReference species="PYR"/>
+        </listOfModifiers>
+        <kineticLaw metaid="b7911579_71d7_4add_8ff1_66549fffd320">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> hill </ci>
+                <ci> PYR </ci>
+                <ci> Vmax </ci>
+                <ci> Kpyr </ci>
+                <ci> nH </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_1594e264_3b6c_450b_a1ad_bcf2c0fe38c8" value="14.2966666666667" units="mM_per_second"/>
+            <parameter id="Kpyr" metaid="c4ac8c69_bf8e_4fec_8b20_93bf6e2be236" value="4.33" units="mM"/>
+            <parameter id="nH" metaid="_73b33202_de9d_47eb_9773_b4152dff93a1" value="1.9" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PFK" name="phosphofructokinase" metaid="meta_PFK" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PFK">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.11"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0003872"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00756"/>
+                </rdf:Bag>
+              </bqbiol:is>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="ATP" metaid="a17e0823_e7ff_4249_bae8_cae6594ea113"/>
+          <speciesReference species="F6P" metaid="c8caceae_7bf4_4764_b0e8_8e054fa5bad5"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ADP" metaid="b5940779_1444_449f_ba73_d190c5ccb64b"/>
+          <speciesReference species="F16bP" metaid="e420d49b_30d1_47c5_a34d_adee7733d65a"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="AMP" metaid="c147365e_77e6_40fe_995c_3f5fd366ead7"/>
+          <modifierSpeciesReference species="F26bP" metaid="_563e211c_fc5d_45b3_99c7_1603fe38ab7a"/>
+          <modifierSpeciesReference species="PFK1" metaid="f1c6c724_2d4e_4bae_bdb7_73630aa6507a"/>
+          <modifierSpeciesReference species="PFK2" metaid="_949687df_399f_4db7_a801_ccaf4c014f08"/>
+          <modifierSpeciesReference species="F6P"/>
+          <modifierSpeciesReference species="ATP"/>
+          <modifierSpeciesReference species="F16bP"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="AMP"/>
+          <modifierSpeciesReference species="F26bP"/>
+          <modifierSpeciesReference species="PFK1"/>
+          <modifierSpeciesReference species="PFK2"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_6818d46f_8316_49a6_a25e_6b7d4db6fee5">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> pfk_keq </ci>
+                <ci> F6P </ci>
+                <ci> ATP </ci>
+                <ci> F16bP </ci>
+                <ci> ADP </ci>
+                <ci> AMP </ci>
+                <ci> F26bP </ci>
+                <apply>
+                  <times/>
+                  <apply>
+                    <ci> min </ci>
+                    <ci> PFK1 </ci>
+                    <ci> PFK2 </ci>
+                  </apply>
+                  <ci> kcat </ci>
+                </apply>
+                <ci> gR </ci>
+                <ci> Kf6p </ci>
+                <ci> Katp </ci>
+                <ci> L0 </ci>
+                <ci> Ciatp </ci>
+                <ci> Kiatp </ci>
+                <ci> Camp </ci>
+                <ci> Kamp </ci>
+                <ci> Cf26 </ci>
+                <ci> Kf26 </ci>
+                <ci> Cf16 </ci>
+                <ci> Kf16 </ci>
+                <ci> Catp </ci>
+                <ci> Kadp </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="kcat" metaid="fedd8d9c_cd32_4c42_98b4_f36af08c4bd2" value="209.6" units="per_second"/>
+            <parameter id="gR" metaid="f001d0aa_03de_41f8_9d80_559741b3b79e" value="5.12" units="dimensionless"/>
+            <parameter id="Kf6p" metaid="_1e504914_12ff_4521_973b_b296a5432efe" value="0.1" units="mM"/>
+            <parameter id="Katp" metaid="_261b1add_12ac_4f72_bf4c_54e91957f7bc" value="0.71" units="mM"/>
+            <parameter id="L0" metaid="_8919e935_f430_45f9_98f6_6275772aa497" value="0.66" units="dimensionless"/>
+            <parameter id="Ciatp" metaid="d88402a6_0f0e_46a1_9fbf_d1618ef3d1b8" value="100" units="dimensionless"/>
+            <parameter id="Kiatp" metaid="aacaf310_3694_47b9_b015_babff2454793" value="0.65" units="mM"/>
+            <parameter id="Camp" metaid="_95293e3f_ecd4_46c5_88d7_81cbf87fa3ca" value="0.0845" units="dimensionless"/>
+            <parameter id="Kamp" metaid="_118d6151_4f7b_4a6f_9661_1980993de7dc" value="0.0995" units="mM"/>
+            <parameter id="Cf26" metaid="_770736e7_1ec0_46f0_bf11_954663f92654" value="0.0174" units="dimensionless"/>
+            <parameter id="Kf26" metaid="a61dd466_e545_4366_ab05_cd09a76b63d8" value="0.000682" units="mM"/>
+            <parameter id="Cf16" metaid="_1e44253b_3613_4df3_b85b_aa1cf25421d6" value="0.397" units="dimensionless"/>
+            <parameter id="Kf16" metaid="b484c4f5_4b76_4aee_8b71_c2e076d71e85" value="0.111" units="mM"/>
+            <parameter id="Catp" metaid="e895c444_ddbd_4696_8323_6cd97855222a" value="3" units="dimensionless"/>
+            <parameter id="Kadp" metaid="_961bbf38_cfe9_4ea6_b5a8_beb5c41d6590" value="1" units="mM"/>
+            <parameter id="Keq" metaid="_2062b246_73cc_4a57_896e_e36097906e76" value="800" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PGI" name="phosphoglucose isomerase" metaid="meta_PGI" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PGI">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00771"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/5.3.1.9"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004347"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="G6P" metaid="d1835d5d_ba05_48c2_b6a1_f21b0b26d5ce"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="F6P" metaid="dab957a9_df17_4610_bf32_e4c2b11da47c"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGI1" metaid="d64d6e45_4c6f_494a_b2cc_48a5b32fadda"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="F6P"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_82acfa83_e04a_4f93_8450_3603e7144401">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm1 </ci>
+                <ci> G6P </ci>
+                <ci> F6P </ci>
+                <ci> Vmax </ci>
+                <ci> Kg6p </ci>
+                <ci> Kf6p </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_9eea7725_f586_4c4c_81ea_bd05fe07f075" value="17.6" units="mM_per_second"/>
+            <parameter id="Kg6p" metaid="_070226cf_9884_424c_b19f_1a2cef92f80a" value="1.4" units="mM"/>
+            <parameter id="Keq" metaid="_67fe8aad_916f_4727_85df_2460349964dc" value="0.29" units="dimensionless"/>
+            <parameter id="Kf6p" metaid="c64f403e_1254_401a_b1b6_16dfb1f1b520" value="0.3" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PGK" name="3-phosphoglycerate kinase" metaid="meta_PGK" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PGK">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01512"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.2.3"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004618"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="ADP" metaid="a7427c4a_9a3e_48f2_a9cc_a1117faf40e3"/>
+          <speciesReference species="BPG" metaid="_6c57c57d_6d7d_4a85_a502_104f3e10daa7"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP" metaid="_18b930f7_825e_44c6_99b9_a805e2242dec"/>
+          <speciesReference species="P3G" metaid="_71a5f1b2_6010_4c17_a371_df14ca3d7d20"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGK1" metaid="f4340d5a_2957_4f3e_a6a1_ced4e797eaf8"/>
+          <modifierSpeciesReference species="BPG"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="P3G"/>
+          <modifierSpeciesReference species="ATP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_7154dfef_7e88_4fc6_8236_01bd22069bac">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm2 </ci>
+                <ci> BPG </ci>
+                <ci> ADP </ci>
+                <ci> P3G </ci>
+                <ci> ATP </ci>
+                <ci> Vmax </ci>
+                <ci> Kbpg </ci>
+                <ci> Kadp </ci>
+                <ci> Kp3g </ci>
+                <ci> Katp </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_8ec6551b_6155_4aea_a249_8b403138190f" value="259.220125786164" units="mM_per_second"/>
+            <parameter id="Keq" metaid="_75d7179b_cab6_4e75_ab5b_351fc532947d" value="3200" units="dimensionless"/>
+            <parameter id="Kp3g" metaid="_090a8582_579c_4370_b4b5_03ec419f3c4c" value="0.53" units="mM"/>
+            <parameter id="Katp" metaid="_0cb3913c_d6b8_4a4a_bfde_bb983f6b764b" value="0.3" units="mM"/>
+            <parameter id="Kbpg" metaid="a878e782_b740_4e85_9aaf_ac6de0d17255" value="0.003" units="mM"/>
+            <parameter id="Kadp" metaid="_13f66817_3c3b_4d19_9783_bf32660a367c" value="0.2" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PGM" name="phosphoglucomutase" metaid="meta_PGM" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PGM">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/5.4.2.2"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="G6P" metaid="_9a458db7_75d1_4935_ae54_8da9028cb0fd"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="G1P" metaid="_06004d16_bb1d_46b7_9a47_96234d6db876"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PGM1" metaid="_76f4986b_ae98_4189_8af2_2af621b04b08"/>
+          <modifierSpeciesReference species="PGM2" metaid="_843e91dd_a722_42b7_88ab_af16a50848cc"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="G1P"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_62ba288f_1142_437d_b2d6_2bff58e82b4c">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> rescale_TRH </ci>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm1 </ci>
+                <ci> G6P </ci>
+                <ci> G1P </ci>
+                <ci> Vmax </ci>
+                <ci> Kg6p </ci>
+                <ci> Kg1p </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_504f5fe8_fd80_4fa2_9734_d5b9bfe5f8cf" value="0.00590833333333333" units="mM_per_second"/>
+            <parameter id="Kg6p" metaid="_62fe3457_7468_45e8_8be1_e5e37e780a96" value="0.05" units="mM"/>
+            <parameter id="Kg1p" metaid="_85562ec2_0f0a_4c61_ae68_a155b168cfc5" value="0.023" units="mM"/>
+            <parameter id="Keq" metaid="_2ac7b252_2228_4e69_8af2_e13ec542358f" value="0.1667" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="PYK" name="pyruvate kinase" metaid="meta_PYK" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_PYK">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R00200"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.1.40"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004743"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="ADP" metaid="_7ad6f9e4_124d_455a_843b_9c3b49b69350"/>
+          <speciesReference species="PEP" metaid="cae1fa57_d7a7_4166_be52_757d22227fce"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ATP" metaid="cb7efc2b_341c_4325_8448_ec44031083c7"/>
+          <speciesReference species="PYR" metaid="_7971b594_1dd4_41ca_bf77_4610151e5643"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="CDC19" metaid="_7e3573cb_de84_4251_8cc9_af058e4d9017"/>
+          <modifierSpeciesReference species="PYK2" metaid="a5bc07bc_9ffe_4443_b322_74fab159e068"/>
+          <modifierSpeciesReference species="PEP"/>
+          <modifierSpeciesReference species="ADP"/>
+          <modifierSpeciesReference species="PYR"/>
+          <modifierSpeciesReference species="ATP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="c406800a_b448_48ae_891d_1c4c57bbcb58">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm2 </ci>
+                <ci> PEP </ci>
+                <ci> ADP </ci>
+                <ci> PYR </ci>
+                <ci> ATP </ci>
+                <ci> Vmax </ci>
+                <ci> Kpep </ci>
+                <ci> Kadp </ci>
+                <ci> Kpyr </ci>
+                <ci> Katp </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="a4dea6d9_f5ec_4e4f_a71f_ee1176603282" value="16.6666666666667" units="mM_per_second"/>
+            <parameter id="Kpep" metaid="afcd3398_4838_4ddd_a48b_2befff95fab0" value="0.14" units="mM"/>
+            <parameter id="Kadp" metaid="_57e41bab_d22c_4162_9512_408d72f22a99" value="0.53" units="mM"/>
+            <parameter id="Keq" metaid="_30be9c07_2c4b_4b64_b96e_d0151bbb0ee9" value="6500" units="dimensionless"/>
+            <parameter id="Kpyr" metaid="dcc23350_791e_4873_b0d3_45fb0e670354" value="21" units="mM"/>
+            <parameter id="Katp" metaid="_842941b2_ff0e_43fb_bccd_b170171641f7" value="1.5" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="TDH" name="glyceraldehyde phosphate dehydrogenase" metaid="meta_TDH" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TDH">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01061"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/1.2.1.12"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004365"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="GAP" metaid="_7f469ae3_4b99_435d_8389_037b86285f15"/>
+          <speciesReference species="NAD" metaid="_323ab58e_adf7_4d5d_a943_4203cee15259"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="BPG" metaid="_1decd09d_e354_4085_9790_e3a50b24c71a"/>
+          <speciesReference species="NADH" metaid="_530c834a_55fd_4bd5_b318_b42d209b69b0"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="TDH1" metaid="a264c8a4_01c5_453d_abaf_d45fdd7936b8"/>
+          <modifierSpeciesReference species="TDH2" metaid="_2812728f_7a05_4720_8e03_97788d87e302"/>
+          <modifierSpeciesReference species="TDH3" metaid="_0a053507_ca73_42a0_b4e4_491808021daf"/>
+          <modifierSpeciesReference species="GAP"/>
+          <modifierSpeciesReference species="NAD"/>
+          <modifierSpeciesReference species="BPG"/>
+          <modifierSpeciesReference species="NADH"/>
+        </listOfModifiers>
+        <kineticLaw metaid="c505423d_a22f_4168_b542_99d1863d6677">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rmm2 </ci>
+                <ci> GAP </ci>
+                <ci> NAD </ci>
+                <ci> BPG </ci>
+                <ci> NADH </ci>
+                <ci> Vmax </ci>
+                <ci> Kgap </ci>
+                <ci> Knad </ci>
+                <ci> Kbpg </ci>
+                <ci> Knadh </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_2ee45458_bd62_403c_a1c0_48c162e9d45d" value="19.2" units="mM_per_second"/>
+            <parameter id="Kgap" metaid="_8aeed64d_c2a6_4add_8aa0_ef49f8db1239" value="0.21" units="mM"/>
+            <parameter id="Knad" metaid="_6e455fb8_5afc_4336_8d6f_3ac1438fcdd9" value="0.09" units="mM"/>
+            <parameter id="Kbpg" metaid="e95beb61_5642_4c00_8675_9350f1cbe990" value="0.0098" units="mM"/>
+            <parameter id="Knadh" metaid="d82b8a5b_1d37_4624_94b2_97857dc04449" value="0.06" units="mM"/>
+            <parameter id="Keq" metaid="_797b4f75_aaa6_487d_85a3_1d161ba6dd41" value="0.00533412710224736" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="TPI" name="triosephosphate isomerase" metaid="meta_TPI" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TPI">
+              <bqbiol:is>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/kegg.reaction/R01015"/>
+                </rdf:Bag>
+              </bqbiol:is>
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/5.3.1.1"/>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0004807"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="DHAP" metaid="d09be39b_584f_4a9c_8f06_a0fe8b4cc5b3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GAP" metaid="_1eeb0b8b_da53_4a61_a0b5_0787c9a66415"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="TPI1" metaid="_1373d16c_59ea_4a06_8248_293b62b41dad"/>
+          <modifierSpeciesReference species="DHAP"/>
+          <modifierSpeciesReference species="GAP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_4779246d_9bbc_4cef_b336_b9a6cbff90ec">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> rma </ci>
+                <ci> DHAP </ci>
+                <ci> GAP </ci>
+                <ci> k </ci>
+                <ci> Keq </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="k" metaid="_74bd0d47_9848_4025_85c9_ae21744c9490" value="7500" units="per_second"/>
+            <parameter id="Keq" metaid="_59942d8f_4157_40e2_9561_336627e69361" value="0.045" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="TPP" name="T6P phosphatase" metaid="meta_TPP" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TPP">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/3.1.3.12"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="T6P" metaid="cde336e0_4cef_4d48_ab1c_9591012d4f85"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="TRH" metaid="b0c97458_5c11_4503_9acd_5b2c479f4698"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="TPS1" metaid="b1ae245b_d80d_4973_983b_d4780079cdb6"/>
+          <modifierSpeciesReference species="TPS2" metaid="dc49e8b0_157b_4509_9e63_fb31134ecef6"/>
+          <modifierSpeciesReference species="T6P"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_87d51945_a333_4cd6_bfb5_0461bcd8f4f4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> rescale_TRH </ci>
+              <ci> cell </ci>
+              <apply>
+                <ci> imm1_np </ci>
+                <ci> T6P </ci>
+                <ci> Vmax </ci>
+                <ci> Kt6p </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_91c18281_034e_42dd_bd75_d63eec40507f" value="0.108333333333333" units="mM_per_second"/>
+            <parameter id="Kt6p" metaid="_6c4c06b5_6851_4c94_8387_5c3de35898af" value="0.5" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="TPS" name="T6P synthase" metaid="meta_TPS" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_TPS">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.4.1.15"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="G6P" metaid="b9a53b49_a1af_4d89_a558_fd196d5a0645"/>
+          <speciesReference species="UDG" metaid="_0e4c81c6_f296_4a49_916d_d35b30a33b96"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="T6P" metaid="c7bdf90d_d788_45aa_a9cd_eb98e4bbe291"/>
+          <speciesReference species="UDP" metaid="_8c040923_5a1d_4801_839a_c4971ae07667"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="TPS1" metaid="_0b868d3b_e18a_4019_b2e5_14abbad93671"/>
+          <modifierSpeciesReference species="TPS2" metaid="_1bb62098_a59e_4fac_826a_b4e3c70d5222"/>
+          <modifierSpeciesReference species="G6P"/>
+          <modifierSpeciesReference species="UDG"/>
+        </listOfModifiers>
+        <kineticLaw metaid="f675d93c_e2fe_41dd_8cae_65eff6b21a4b">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> rescale_TRH </ci>
+              <ci> cell </ci>
+              <apply>
+                <ci> imm2_np </ci>
+                <ci> G6P </ci>
+                <ci> UDG </ci>
+                <ci> Vmax </ci>
+                <ci> Kg6p </ci>
+                <ci> Kudg </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_4f748e75_a0d2_4309_a861_c3f2b3e5d6db" value="0.02285" units="mM_per_second"/>
+            <parameter id="Kg6p" metaid="_9b2f4058_3e6f_43e2_960a_2ba1f506f764" value="3.8" units="mM"/>
+            <parameter id="Kudg" metaid="_90bce4ef_12a1_48e7_b6e2_4fcdb03897cb" value="0.886" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="UGP" name="UDP glucose phosphorylase" metaid="meta_UGP" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_UGP">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/ec-code/2.7.7.9"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="G1P" metaid="affa1255_0814_4e54_b5ad_c4779c6ae937"/>
+          <speciesReference species="UTP" metaid="c0787222_0c83_4b0a_953a_21df3eaac125"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="UDG" metaid="_5f6a1750_d936_4d50_9dd6_78f1933549b9"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="UGP1" metaid="_59b3f162_f06d_47f6_b83f_3cf3236d8835"/>
+          <modifierSpeciesReference species="UTP"/>
+          <modifierSpeciesReference species="G1P"/>
+          <modifierSpeciesReference species="UDG"/>
+        </listOfModifiers>
+        <kineticLaw metaid="cbd1ffdb_fc62_4904_8a6a_99cd00eba043">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> rescale_TRH </ci>
+              <ci> cell </ci>
+              <apply>
+                <ci> ugp_fun </ci>
+                <ci> UTP </ci>
+                <ci> G1P </ci>
+                <ci> UDG </ci>
+                <ci> Vmax </ci>
+                <ci> Kutp </ci>
+                <ci> Kiutp </ci>
+                <ci> Kg1p </ci>
+                <ci> Kiudg </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_80e01c05_64a7_4d77_b905_42e4f9588c38" value="0.613666666666667" units="mM_per_second"/>
+            <parameter id="Kutp" metaid="_8c73dbaa_6cd0_46a1_a4ff_76896d41bb59" value="0.11" units="mM"/>
+            <parameter id="Kiutp" metaid="e3a5a412_c3ba_4a9b_96da_511beefa31c4" value="0.11" units="mM"/>
+            <parameter id="Kg1p" metaid="d05cb9a9_2f50_40b2_9672_bd6f517c5a7a" value="0.32" units="mM"/>
+            <parameter id="Kiudg" metaid="_4b95fd26_afd3_46ed_b773_2e8ee6fe4f0e" value="0.0035" units="mM"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="acetate_branch" name="acetate branch" metaid="meta_acetate_branch" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_acetate_branch">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006105"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="AcAld" metaid="_5d4d1e83_ccc5_4438_9a9c_ab59e394ecd4"/>
+          <speciesReference species="NAD" metaid="_656794b2_de5a_46e7_beff_529b7de21234"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="ACE" metaid="_6d97b1ba_32bf_4b23_9214_e69a6ce616ca"/>
+          <speciesReference species="NADH" metaid="_048be488_a504_4d79_a33d_fd5912f99a62"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="AcAld"/>
+          <modifierSpeciesReference species="NAD"/>
+        </listOfModifiers>
+        <kineticLaw metaid="d417b60e_fe81_40c6_8a85_5799a8113674">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> ima </ci>
+                <apply>
+                  <times/>
+                  <ci> AcAld </ci>
+                  <ci> NAD </ci>
+                </apply>
+                <ci> k </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="k" metaid="_14f681cd_1015_4eb7_80b3_5b1d551c89e0" value="0.00554339592436782" units="per_mM_per_second"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="succinate_branch" name="succinate branch" metaid="meta_succinate_branch" reversible="false" sboTerm="SBO:0000176">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_succinate_branch">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0006105"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="PYR" metaid="_0fd7f121_7d86_4203_a2a2_2fa029ac0437"/>
+          <speciesReference species="NAD" metaid="_247c8185_0b72_49d6_b671_9f7127c25926" stoichiometry="3"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="SUC" metaid="_13223ecc_c1f6_418f_bcf2_92aab840798a" stoichiometry="0.75"/>
+          <speciesReference species="NADH" metaid="_7a705ea4_aae9_4c85_84e4_6875e79b0118" stoichiometry="3"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="PYR"/>
+          <modifierSpeciesReference species="NAD"/>
+        </listOfModifiers>
+        <kineticLaw metaid="_94465270_2f0e_4239_aefd_ed2424a8e33f">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> ima </ci>
+                <apply>
+                  <times/>
+                  <ci> PYR </ci>
+                  <ci> NAD </ci>
+                </apply>
+                <ci> k </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="k" metaid="_7fde49aa_dcf8_46b6_9716_9dbe8264404f" value="0.00549663630823988" units="per_mM_per_second"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="udp_to_utp" name="UDP to UTP pseudoreaction" metaid="_2ef8b8e9_1554_4f2c_bdf4_ff9612e53665" reversible="false" sboTerm="SBO:0000176">
+        <listOfReactants>
+          <speciesReference species="UDP" metaid="ee069b62_12d9_46db_ad4f_486f56f7ef10"/>
+          <speciesReference species="ATP" metaid="ab33e305_416c_4e3e_9bf6_f64907713445"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="UTP" metaid="_1652ea13_6dbf_47d6_b3c3_51b288224506"/>
+          <speciesReference species="ADP" metaid="_57b287ad_3583_4af4_9d59_3fffe0376041"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="UDP"/>
+          <modifierSpeciesReference species="ATP"/>
+        </listOfModifiers>
+        <kineticLaw metaid="f39f0a67_bbf7_4496_80da_e99011d744c4">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> rescale_TRH </ci>
+              <ci> cell </ci>
+              <apply>
+                <ci> ima </ci>
+                <apply>
+                  <times/>
+                  <ci> UDP </ci>
+                  <ci> ATP </ci>
+                </apply>
+                <ci> k </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="k" metaid="_3a8ece9e_3d39_45ec_9b8e_c5ca36c0b4c0" value="0.00345026988011002" units="per_mM_per_second"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+      <reaction id="HXT" name="glucose transport" metaid="meta_HXT" sboTerm="SBO:0000185">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqmodel="http://biomodels.net/model-qualifiers/" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#meta_HXT">
+              <bqbiol:isVersionOf>
+                <rdf:Bag>
+                  <rdf:li rdf:resource="http://identifiers.org/obo.go/GO:0015758"/>
+                </rdf:Bag>
+              </bqbiol:isVersionOf>
+            </rdf:Description>
+          </rdf:RDF>
+        </annotation>
+              <listOfReactants>
+          <speciesReference species="GLCx" metaid="d981d589_0fd7_4164_bc1b_461d111fe780"/>
+        </listOfReactants>
+        <listOfProducts>
+          <speciesReference species="GLC" metaid="_80538d1e_340d_4584_95ee_eb6bcae5be36"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="GLCx"/>
+          <modifierSpeciesReference species="GLC"/>
+        </listOfModifiers>
+        <kineticLaw metaid="ae0b5afe_3e15_4cb5_b67e_8cee843da498">
+          <math xmlns="http://www.w3.org/1998/Math/MathML">          
+            <apply>
+              <times/>
+              <ci> cell </ci>
+              <apply>
+                <ci> fd </ci>
+                <ci> GLCx </ci>
+                <ci> GLC </ci>
+                <ci> Vmax </ci>
+                <ci> Kglc </ci>
+                <ci> Ki </ci>
+              </apply>
+            </apply>
+          </math>
+                  <listOfParameters>
+            <parameter id="Vmax" metaid="_0ba37bce_8e0e_4b56_b221_2268def8ce55" value="3.35" units="mM_per_second"/>
+            <parameter id="Kglc" metaid="_046f7752_b1c0_4c70_9a4a_964ac87a7d33" value="0.9" units="mM"/>
+            <parameter id="Ki" metaid="e97cccd4_b917_42fa_9cb0_b6c81403c833" value="0.91" units="dimensionless"/>
+          </listOfParameters>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>
